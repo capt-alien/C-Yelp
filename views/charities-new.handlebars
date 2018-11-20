@@ -1,28 +1,29 @@
-<form method="POST" action="/charity">
+<form method="POST" action="/charities">
   <fieldset>
     <legend>New Gift</legend>
     <!-- TITLE -->
     <p>
-      <label for="gift-title">Gift</label><br>
-      <input id="gift-title" type="text" name="Gift" />
+      <label for="gift">Gift</label><br>
+      <input id="gift" type="number" name="gift" required />
+
     </p>
 
-    <!-- MOVIE TITLE -->
+    <!-- Charity name -->
     <p>
-      <label for="CharName">Name of Charity</label><br>
-      <input id="CharName" type="text" name="CharName" />
+      <label for="charName">Name of Charity</label><br>
+      <input id="charName" type="text" name="charName" required />
     </p>
 
     <!-- DESCRIPTION -->
     <p>
       <label for="description-text">Description</label><br>
-      <textarea id="description-text" name="description" rows="10" /></textarea>
+      <textarea id="description-text" name="description" rows="10" required /></textarea>
     </p>
   </fieldset>
 
   <!-- BUTTON -->
   <p>
-    <button type="submit Gift">Save Review</button>
+    <button type="submit">Save Charity</button>
   </p>
 
 </form>

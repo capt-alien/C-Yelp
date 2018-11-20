@@ -1,10 +1,11 @@
 <!-- charities-index -->
 <h1>Charities</h1>
 
-<a href="/reviews/new">New Charity</a>
+<a href="/charities/new">New Charity</a>
 
 
 {{#each charities}}
-  <h2>{{this.gift}}</h2>
-  <small>{{this.CharName}}</small>
+  <h2> <a href=“/charities/{{this._id}}”>{{this.gift}} </a> </h2>
+  <small>{{this.charName}}</small>
+  <p>{{this.description}}</p>
 {{/each}}
