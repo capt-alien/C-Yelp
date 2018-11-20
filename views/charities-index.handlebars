@@ -5,7 +5,10 @@
 
 
 {{#each charities}}
-  <h2> <a href=“/charities/{{this._id}}”>{{this.gift}} </a> </h2>
-  <small>{{this.charName}}</small>
+  <p>
+      {{this.gift}}  </p>
+  <h2> <a href=“/charities/{{this._id}}”>
+      {{this.charName}}</a></h2>
+
   <p>{{this.description}}</p>
 {{/each}}
