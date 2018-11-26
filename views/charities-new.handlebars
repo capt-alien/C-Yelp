@@ -1,29 +1,11 @@
+<!-- views/reviews-new.handlebars -->
+
 <form method="POST" action="/charities">
-  <fieldset>
-    <legend>New donation</legend>
-    <!-- TITLE -->
-    <p>
-      <label for="donation">Donation</label><br>
-      <input id="donation" type="number" name="donation" required />
-
-    </p>
-
-    <!-- Charity name -->
-    <p>
-      <label for="charName">Name of Charity</label><br>
-      <input id="charName" type="text" name="charName" required />
-    </p>
-
-    <!-- DESCRIPTION -->
-    <p>
-      <label for="description-text">Description</label><br>
-      <textarea id="description-text" name="description" rows="10" required /></textarea>
-    </p>
-  </fieldset>
+  {{> charity-form}}
 
   <!-- BUTTON -->
   <p>
-    <button type="submit">Save Charity</button>
+    <button type="submit">Save Donation</button>
   </p>
 
 </form>

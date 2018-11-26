@@ -1,0 +1,9 @@
+<!-- views/reviews-edit.handlebars -->
+
+<form method="POST" action="/charities/{{charity._id}}?_method=PUT">
+  {{> charities-form}}
+  <!-- BUTTON -->
+  <p>
+    <button type="submit">Save Donation</button>
+  </p>
+</form>
