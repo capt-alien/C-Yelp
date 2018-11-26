@@ -5,10 +5,9 @@ mongoose.connect('mongodb://localhost/c-yelp');
 const bodyParser = require('body-parser');
 //ODM
 const Charity = mongoose.model('Charity', {
-  gift: Number,
+  donation: Number,
   charName: String,
   description: String
-
 });
 
 
@@ -19,15 +18,6 @@ var exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-
-// OUR MOCK ARRAY OF PROJECTS
-// let charities = [
-//   { gift: "Great Review", CharName: "Batman II" },
-//   { gift: "Awesome Movie", CharName: "Titanic" }
-// ]
-
-
-
 
 
 // INDEX
@@ -55,6 +45,18 @@ app.post('/charities', (req, res) => {
     console.log(err.message);
 })
 })
+
+
+// SHOW <== WTF is wrong with this!!
+app.get('/charities/:id', (req, res) => {
+  Charity.findById(req.params.id).then((charity) => {
+    res.render('charities-show', { charity: charity })
+  }).catch((err) => {
+    console.log(err.message);
+  })
+})
+
+
 
 
 app.listen(3000, () => {
