@@ -6,13 +6,7 @@
 
 <p><a href="/charities/{{charity._id}}/edit">Edit</a></p>
 
-
-<!-- <h1>{{review.title}}</h1>
-<h2>{{review.movieTitle}}</h2>
-<p>{{review.description}}</p> -->
-
-
-<!-- const Charity = mongoose.model('Charity', {
-  donation: Number,
-  charName: String,
-  description: String -->
+<!-- Delete button -->
+<p><form method="POST" action="/charities/{{charity._id}}?_method=DELETE">
+    <button type="submit">Delete</button>
+</form></p>
