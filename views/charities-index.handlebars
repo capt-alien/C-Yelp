@@ -3,12 +3,14 @@
 
 <a href="/charities/new">New Charity</a>
 
-
+<div class="row">
 {{#each charities}}
-  <p>
+  <div class="col-sm-3">
       {{this.donation}}  </p>
   <h2> <a href="/charities/{{this._id}}">
       {{this.charName}}</a></h2>
 
-  <p>{{this.description}}</p>
+  <small>{{this.description}}</small>
+  </div>
 {{/each}}
+</div>

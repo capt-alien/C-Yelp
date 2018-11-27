@@ -1,11 +1,14 @@
-<!-- views/reviews-new.handlebars -->
 
-<form method="POST" action="/charities">
-  {{> charities-form}}
+<!-- views/charities-new.handlebars -->
 
-  <!-- BUTTON -->
-  <p>
-    <button type="submit">Save Donation</button>
-  </p>
-
-</form>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/charities">
+      {{> charities-form}}
+      <!-- BUTTON -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save Donation</button>
+      </div>
+    </form>
+  </div>
+</div>

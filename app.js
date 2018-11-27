@@ -18,8 +18,8 @@ app.set('view engine', 'handlebars');
 
 const Charities = require('./controllers/charities')(app);
 
-// const Charities = require('./controllers/charities')(app, Charity);
-
+// export for testing
+module.exports = app;
 
 app.listen(3000, () => {
   console.log('App listening on port 3000!')

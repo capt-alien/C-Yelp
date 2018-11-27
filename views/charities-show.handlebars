@@ -1,4 +1,7 @@
 <!-- views/charities-show.handlebars -->
+<a href="/">Back to Home</a>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
 
 <h1>{{charity.donation}}</h1>
 <h2>{{charity.charName}}</h2>
@@ -10,3 +13,5 @@
 <p><form method="POST" action="/charities/{{charity._id}}?_method=DELETE">
     <button type="submit">Delete</button>
 </form></p>
+</div>
+</div>

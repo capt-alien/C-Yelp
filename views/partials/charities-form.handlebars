@@ -4,24 +4,24 @@
   <legend>Edit Donation</legend>
 
   <!-- TITLE -->
-  <p>
+   <div class="form-group">
     <label for="donation">Donation</label><br>
-    <input id="donation" type="number" name="donation" required />
+    <input class="form-control" id="donation" type="number" name="donation" required />
 
-  </p>
+ </div>
+
 
   <!-- Charity name -->
-  <p>
+    <div class="form-group">
     <label for="charName">Name of Charity</label><br>
-    <input id="charName" type="text" name="charName" required />
-  </p>
-
-  <!-- DESCRIPTION -->
-  <p>
-    <label for="description-text">Description</label><br>
-    <textarea id="description-text" name="description" rows="10" required /></textarea>
-  </p>
-</fieldset>
+    <input class="form-control"  id="charName" type="text" name="charName" required value="{{charity.donation}}" />
+    </div>
 
 
+
+<!-- DESCRIPTION -->
+<div class="form-group">
+  <label for="charity-description">Description</label><br>
+  <textarea class="form-control" id="charity-description" name="description" rows="10" />{{charity.description}}</textarea>
+</div>
 </fieldset>
