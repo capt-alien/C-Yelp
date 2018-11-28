@@ -1,8 +1,10 @@
 <!-- views/partials/comment-form.handlebars -->
 
-<form>
-  <fieldset>
-    <legend>Add a Comment</legend>
+    <form action="/charities/comments" method="post">
+        <input type="hidden" value="{{charity._id}}" name="charity">
+
+      <fieldset>
+      <legend>Add a Comment</legend>
     <!-- TITLE -->
     <div class="form-group">
       <label for="comment-title">Title</label><br>

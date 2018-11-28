@@ -1,5 +1,6 @@
 //Charities.js
 const Charity = require('../models/charity');
+const Comment = require('../models/comment');
 
 module.exports = function(app) {
 
@@ -32,11 +33,13 @@ app.post('/charities', (req, res) => {
 // SHOW <== WTF is wrong with this!!
 app.get('/charities/:id', (req, res) => {
   Charity.findById(req.params.id).then((charity) => {
-    res.render('charities-show', { charity: charity })
+    Comment.find({ charity: req.params.id }).then(comments => {
+      res.render('charities-show', { charity: charity, comments: comments })
+    })
   }).catch((err) => {
     console.log(err.message);
-  })
-})
+});
+});
 
 // EDIT
 app.get('/charities/:id/edit', (req, res) => {

@@ -17,7 +17,9 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // Routes
-const Charities = require('./controllers/charities')(app);
+require('./controllers/charities')(app);
+require('./controllers/comments')(app);
+
 
 
 const port = process.env.PORT || 3000;
