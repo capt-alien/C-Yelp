@@ -1,27 +1,28 @@
-<!-- views/partials/CHARITIES-form.handlebars -->
-
 <fieldset>
   <legend>Edit Donation</legend>
-
   <!-- TITLE -->
-   <div class="form-group">
-    <label for="donation">Donation</label><br>
-    <input class="form-control" id="donation" type="number" name="donation" required />
+  <div class="form-group">
+    <label for="charity-donation">Donation Amount</label><br>
+    <input class="form-control" id="charity-donation" type="number" name="donation"  required value="{{charity.donation}}"/>
+  </div>
 
- </div>
+  <!-- MOVIE TITLE -->
+  <div class="form-group">
+    <label for="charName">Charity Name</label><br>
+    <input class="form-control" id="charName" type="text" name="charName" value="{{charity.charName}}" />
+  </div>
 
-
-  <!-- Charity name -->
-    <div class="form-group">
-    <label for="charName">Name of Charity</label><br>
-    <input class="form-control"  id="charName" type="text" name="charName" required value="{{charity.donation}}" />
-    </div>
-
-
-
-<!-- DESCRIPTION -->
-<div class="form-group">
-  <label for="charity-description">Description</label><br>
-  <textarea class="form-control" id="charity-description" name="description" rows="10" />{{charity.description}}</textarea>
-</div>
+  <!-- DESCRIPTION -->
+  <div class="form-group">
+    <label for="charity-description">Description</label><br>
+    <textarea class="form-control" id="charity-description" name="description" rows="10" />{{charity.description}}</textarea>
+  </div>
 </fieldset>
+
+
+
+<!-- const Charity = mongoose.model('Charity', {
+  donation: Number,
+  charName: String,
+  description: String
+}); -->
