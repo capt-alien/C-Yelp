@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+// override with POST having ?_method=DELETE or ?_method=PUT
+app.use(methodOverride('_method'))
+
 
 // Routes
 require('./controllers/charities')(app);

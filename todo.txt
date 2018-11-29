@@ -1,0 +1,10 @@
+change chartiy to donation
+make pretty
+    -give differt themes
+    - Change donation amount to use $ and have better formationg
+
+
+have campignes for giving
+    ~Change comment title to amounts
+
+add donations to comments
