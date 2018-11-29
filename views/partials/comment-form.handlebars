@@ -4,15 +4,16 @@
         <input type="hidden" value="{{charity._id}}" name="charity">
 
       <fieldset>
-      <legend>Add a Comment</legend>
+      <legend>Make a Donation</legend>
     <!-- TITLE -->
     <div class="form-group">
-      <label for="comment-title">Title</label><br>
+      <label for="comment-Amount">Amount</label><br>
       <input class="form-control"
         id="comment-title"
-        type="text"
-        name="title"
-        placeholder="Title"/>
+        type="number"
+        name="amount"
+        required
+        placeholder="Amount"/>
     </div>
 
     <!-- DESCRIPTION -->

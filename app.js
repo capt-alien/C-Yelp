@@ -22,7 +22,14 @@ app.use(methodOverride('_method'))
 // Routes
 require('./controllers/charities')(app);
 require('./controllers/comments')(app);
-
+// About us Routes// About
+app.get('/about', (req, res) => {
+  res.render('about', {});
+})
+// signup page
+app.get('/give', (req, res) => {
+  res.render('give', {});
+})
 
 
 const port = process.env.PORT || 3000;
